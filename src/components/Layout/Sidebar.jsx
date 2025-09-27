@@ -150,20 +150,21 @@ function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
                 <div className="flex items-center space-x-3">
                   <item.icon className={`w-5 h-5`} />
                   {/* Condition Rendering */}
-                  <>
-                    {!collapsed && (
+                  {!collapsed && (
+                    <>
                       <span className="font-medium ml-2">{item.label}</span>
-                    )}
-                    {item.badge && (
-                      <span className="px-2 py-1 text-xs bg-red-500 text-white dark:text-red-50 rounded-full">
-                        {item.badge}
-                      </span>
-                    )}
-                  </>
-                  {item.count && (
-                    <span className="px-2 py-1 text-xs bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full">
-                      {item.count}
-                    </span>
+                      {item.badge && (
+                        <span className="px-2 py-1 text-xs bg-red-500 text-white dark:text-red-50 rounded-full">
+                          {item.badge}
+                        </span>
+                      )}
+
+                      {item.count && (
+                        <span className="px-2 py-1 text-xs bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-full">
+                          {item.count}
+                        </span>
+                      )}
+                    </>
                   )}
                 </div>
 
